@@ -28,11 +28,11 @@ $error = isset($_GET['error']);
         <a href="/#standards">Standards</a>
       </nav>
       <div class="headerActions" aria-label="Contact options">
-        <a class="headerIcon" href="mailto:enquiries@internationalbodyguards.net" aria-label="Email enquiries at International Bodyguards" title="Email">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z"></path><path d="m4.5 7.5 7.5 6 7.5-6"></path></svg>
+        <a class="headerContact headerIcon" href="mailto:enquiries@internationalbodyguards.net" aria-label="Email enquiries at International Bodyguards" title="Email">
+          <img src="/assets/email-icon.svg" width="18" height="18" alt="" aria-hidden="true">
         </a>
-        <a class="headerIcon headerIconWhatsApp" href="https://wa.me/447702298687" target="_blank" rel="noreferrer" aria-label="Contact International Bodyguards on WhatsApp" title="WhatsApp">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.8a8.2 8.2 0 0 1-12 7.2l-4.5 1.2 1.2-4.4a8.2 8.2 0 1 1 15.3-4Z"></path><path d="M8.2 7.7c.3-.3.7-.4 1-.1l1.1 1.7c.2.3.1.7-.1.9l-.6.7c.7 1.5 1.8 2.6 3.3 3.3l.7-.6c.3-.2.6-.3.9-.1l1.7 1.1c.3.2.3.7.1 1-.6.8-1.5 1.2-2.5 1-3.5-.8-6.2-3.5-7-7-.2-1 .2-1.9 1.4-2.9Z"></path></svg>
+        <a class="headerContact headerIcon headerIconWhatsApp" href="https://wa.me/447702298687" target="_blank" rel="noreferrer" aria-label="Contact International Bodyguards on WhatsApp" title="WhatsApp">
+          <img src="/assets/whatsapp-icon.svg" width="19" height="19" alt="" aria-hidden="true">
         </a>
         <a class="headerCta" href="/request-protection/" aria-current="page">Request protection</a>
       </div>

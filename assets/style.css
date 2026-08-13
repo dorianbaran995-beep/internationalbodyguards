@@ -136,25 +136,27 @@ a {
   color: #d4d5d2;
   display: inline-flex;
   flex: 0 0 auto;
-  height: 34px;
+  height: 36px;
   justify-content: center;
+  padding: 0;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
-  width: 34px;
+  width: 36px;
 }
 
-.headerIcon svg {
-  fill: none;
-  height: 15px;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.6;
-  width: 15px;
+.headerIcon img {
+  display: block;
+  height: 18px;
+  max-height: 18px;
+  max-width: 18px;
+  object-fit: contain;
+  width: 18px;
 }
 
-.headerIconWhatsApp svg {
-  height: 17px;
-  width: 17px;
+.headerIconWhatsApp img {
+  height: 19px;
+  max-height: 19px;
+  max-width: 19px;
+  width: 19px;
 }
 
 .headerIcon:hover,
