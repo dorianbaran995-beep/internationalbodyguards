@@ -125,24 +125,48 @@ a {
 .headerActions {
   align-items: center;
   display: flex;
-  gap: clamp(10px, 1.2vw, 18px);
+  gap: 8px;
   justify-self: end;
 }
 
-.headerContact {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+.headerIcon {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
   color: #d4d5d2;
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  padding-bottom: 6px;
-  text-transform: uppercase;
-  transition: border-color 180ms ease, color 180ms ease;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 34px;
+  justify-content: center;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+  width: 34px;
 }
 
-.headerContact:hover,
-.headerContact:focus-visible {
+.headerIcon svg {
+  fill: none;
+  height: 15px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+  width: 15px;
+}
+
+.headerIconWhatsApp svg {
+  height: 17px;
+  width: 17px;
+}
+
+.headerIcon:hover,
+.headerIcon:focus-visible {
+  background: rgba(200, 164, 98, 0.12);
   border-color: var(--gold);
   color: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.headerActions .headerCta {
+  margin-left: 6px;
 }
 
 .hero {
@@ -1603,22 +1627,31 @@ a {
   }
 
   .headerActions {
-    display: grid;
+    display: flex;
     gap: 6px;
     grid-column: 1;
     grid-row: 2;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-self: stretch;
     width: 100%;
   }
 
-  .headerContact,
-  .headerCta {
+  .headerIcon {
+    background: rgba(255, 255, 255, 0.025);
+    height: 36px;
+    width: 36px;
+  }
+
+  .headerActions .headerCta {
+    align-items: center;
     border: 1px solid rgba(255, 255, 255, 0.22);
+    display: inline-flex;
+    flex: 1;
     font-size: 8px;
+    justify-content: center;
     justify-self: stretch;
     letter-spacing: 0.06em;
     line-height: 1.2;
+    margin-left: 0;
     padding: 8px 4px;
     text-align: center;
     white-space: nowrap;
