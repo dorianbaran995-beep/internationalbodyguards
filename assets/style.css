@@ -46,6 +46,7 @@ a {
   background: rgba(8, 9, 10, 0.9);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line-dark);
+  color: white;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   height: 86px;
@@ -79,6 +80,7 @@ a {
 }
 
 .brand strong {
+  color: white;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -118,6 +120,29 @@ a {
   letter-spacing: 0.12em;
   padding-bottom: 6px;
   text-transform: uppercase;
+}
+
+.headerActions {
+  align-items: center;
+  display: flex;
+  gap: clamp(10px, 1.2vw, 18px);
+  justify-self: end;
+}
+
+.headerContact {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  color: #d4d5d2;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.headerContact:hover,
+.headerContact:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold-light);
 }
 
 .hero {
@@ -1177,12 +1202,56 @@ a {
   margin: 0;
 }
 
-.requestHero > p {
+.requestHeroIntro > p {
   color: #a5a7a3;
   font-size: 15px;
   line-height: 1.75;
   margin: 0;
   max-width: 560px;
+}
+
+.requestHeroIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.requestDirectContacts {
+  display: grid;
+  gap: 9px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.requestDirectContacts a {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding: 14px 15px;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.requestDirectContacts a:hover,
+.requestDirectContacts a:focus-visible {
+  background: rgba(200, 164, 98, 0.08);
+  border-color: var(--gold);
+}
+
+.requestDirectContacts span {
+  color: var(--gold);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.requestDirectContacts strong {
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
 }
 
 .requestFormLayout {
@@ -1414,16 +1483,41 @@ a {
 
 @media (max-width: 1050px) {
   .desktopNav {
-    display: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    padding-top: 10px;
+    width: 100%;
   }
 
   .siteHeader {
     grid-template-columns: 1fr auto;
+    height: auto;
+    min-height: 126px;
+    padding-bottom: 10px;
+    padding-top: 12px;
+    row-gap: 10px;
+  }
+
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .headerActions {
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 170px;
+    padding-top: 205px;
+  }
+
+  .heroGrid {
+    inset: 126px 0 0;
   }
 
   .heroVisual {
@@ -1484,8 +1578,11 @@ a {
 
 @media (max-width: 720px) {
   .siteHeader {
-    height: 74px;
-    padding: 0 18px;
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 0;
+    padding: 11px 16px 10px;
+    row-gap: 9px;
   }
 
   .brandMark {
@@ -1505,9 +1602,53 @@ a {
     font-size: 8px;
   }
 
+  .headerActions {
+    display: grid;
+    gap: 6px;
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .headerContact,
+  .headerCta {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    font-size: 8px;
+    justify-self: stretch;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    padding: 8px 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .headerCta {
+    background: rgba(200, 164, 98, 0.12);
+    border-color: var(--gold);
+  }
+
+  .desktopNav {
+    gap: 6px;
+    grid-column: 1;
+    grid-row: 3;
+    justify-content: space-between;
+    padding-top: 9px;
+  }
+
+  .desktopNav a {
+    font-size: 9px;
+    letter-spacing: 0.04em;
+  }
+
   .hero {
     min-height: auto;
-    padding: 130px 22px 65px;
+    padding: 225px 22px 65px;
+  }
+
+  .heroGrid {
+    inset: 176px 0 0;
   }
 
   .hero h1 {
@@ -1675,13 +1816,34 @@ a {
     gap: 28px;
     grid-template-columns: 1fr;
     padding-bottom: 42px;
-    padding-top: 108px;
+    padding-top: 218px;
+  }
+
+  .requestDirectContacts {
+    grid-template-columns: 1fr;
   }
 
   .requestFormLayout {
-    padding-top: 32px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 32px;
+  }
+
+  .shortEnquiryForm {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .shortEnquiryForm fieldset {
+    padding-bottom: 42px;
+    padding-top: 36px;
+  }
+
+  .enquiryForm input,
+  .enquiryForm select,
+  .enquiryForm textarea {
+    font-size: 16px;
+    max-width: 100%;
   }
 
   .legalContent {
@@ -1704,7 +1866,7 @@ a {
 
 @media (max-width: 460px) {
   .brand strong {
-    max-width: 145px;
+    max-width: none;
   }
 
   .brand small {

@@ -27,7 +27,11 @@ $error = isset($_GET['error']);
         <a href="/#approach">Approach</a>
         <a href="/#standards">Standards</a>
       </nav>
-      <a class="headerCta" href="/request-protection/" aria-current="page">Request protection</a>
+      <div class="headerActions" aria-label="Contact options">
+        <a class="headerContact" href="mailto:enquiries@internationalbodyguards.net" aria-label="Email enquiries at International Bodyguards">Email</a>
+        <a class="headerContact" href="https://wa.me/447702298687" target="_blank" rel="noreferrer" aria-label="Contact International Bodyguards on WhatsApp">WhatsApp</a>
+        <a class="headerCta" href="/request-protection/" aria-current="page">Request protection</a>
+      </div>
     </header>
 
     <section class="requestHero">
@@ -35,7 +39,19 @@ $error = isset($_GET['error']);
         <p class="eyebrow"><span></span> Confidential request</p>
         <h1>Request protection.</h1>
       </div>
-      <p>Complete this short form with the essential assignment details. We will review your request discreetly and contact you to discuss the next step.</p>
+      <div class="requestHeroIntro">
+        <p>Complete this short form with the essential assignment details. We will review your request discreetly and contact you to discuss the next step.</p>
+        <div class="requestDirectContacts" aria-label="Direct contact options">
+          <a href="https://wa.me/447702298687" target="_blank" rel="noreferrer">
+            <span>WhatsApp</span>
+            <strong>+44 7702 298 687</strong>
+          </a>
+          <a href="mailto:enquiries@internationalbodyguards.net">
+            <span>Email</span>
+            <strong>enquiries@internationalbodyguards.net</strong>
+          </a>
+        </div>
+      </div>
     </section>
 
     <section class="requestFormLayout">
