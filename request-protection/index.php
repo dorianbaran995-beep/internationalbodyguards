@@ -11,7 +11,16 @@ $error = isset($_GET['error']);
   <meta name="description" content="Submit a confidential request for bodyguard, family, travel or executive protection services.">
   <link rel="canonical" href="https://internationalbodyguards.net/request-protection/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/style.css?v=20260813-5">
+  <style>
+    .siteHeader .headerActions{align-items:center!important;display:flex!important;gap:8px!important;justify-self:end!important}
+    .siteHeader .headerIcon{align-items:center!important;border:1px solid rgba(255,255,255,.24)!important;border-radius:50%!important;display:inline-flex!important;flex:0 0 36px!important;height:36px!important;justify-content:center!important;padding:0!important;width:36px!important}
+    .siteHeader .headerIcon img{display:block!important;height:18px!important;max-height:18px!important;max-width:18px!important;object-fit:contain!important;width:18px!important}
+    .siteHeader .headerIconWhatsApp img{height:19px!important;max-height:19px!important;max-width:19px!important;width:19px!important}
+    .siteHeader .headerActions .headerCta{margin-left:6px!important}
+    @media(max-width:1050px){.siteHeader{grid-template-columns:1fr auto!important;height:auto!important;min-height:126px!important;padding-bottom:10px!important;padding-top:12px!important;row-gap:10px!important}.siteHeader .brand{grid-column:1!important;grid-row:1!important}.siteHeader .headerActions{grid-column:2!important;grid-row:1!important}.siteHeader .desktopNav{border-top:1px solid rgba(255,255,255,.12)!important;display:flex!important;grid-column:1/-1!important;grid-row:2!important;justify-content:center!important;padding-top:10px!important;width:100%!important}.hero{padding-top:205px!important}.heroGrid{inset:126px 0 0!important}}
+    @media(max-width:720px){.siteHeader{grid-template-columns:1fr!important;min-height:0!important;padding:11px 16px 10px!important;row-gap:9px!important}.siteHeader .brand{grid-column:1!important;grid-row:1!important}.siteHeader .headerActions{gap:6px!important;grid-column:1!important;grid-row:2!important;justify-self:stretch!important;width:100%!important}.siteHeader .headerActions .headerCta{align-items:center!important;border:1px solid var(--gold)!important;display:inline-flex!important;flex:1!important;justify-content:center!important;margin-left:0!important;padding:8px 4px!important;text-align:center!important;white-space:nowrap!important}.siteHeader .desktopNav{gap:6px!important;grid-column:1!important;grid-row:3!important;justify-content:space-between!important;padding-top:9px!important}.hero{padding-top:225px!important}.heroGrid{inset:176px 0 0!important}.requestHero{padding-top:218px!important}}
+  </style>
   <script src="/assets/request-form.js" defer></script>
 </head>
 <body>
