@@ -1,0 +1,32 @@
+INTERNATIONALBODYGUARDS.NET — HOSTING PACKAGE
+
+1. Open your hosting File Manager.
+2. Open the public_html folder for internationalbodyguards.net.
+3. Upload the CONTENTS of this ZIP package, not the outer folder itself.
+4. Make sure index.html is directly inside public_html.
+5. Confirm these paths exist:
+   public_html/index.html
+   public_html/assets/style.css
+   public_html/assets/international-bodyguards-brand.jpg
+   public_html/request-protection/index.php
+   public_html/request-protection/send.php
+   public_html/legal/index.html
+   public_html/privacy/index.html
+6. Activate SSL/HTTPS for the domain in your hosting control panel.
+7. Test the homepage, Legal page, Privacy page and contact email button.
+
+IMPORTANT
+
+- The site requires PHP with the PHP mail() function enabled. It does not require
+  MySQL, Node.js or an installation process.
+- The current contact address is enquiries@internationalbodyguards.net.
+  Create that mailbox before launching. Also create website@internationalbodyguards.net
+  as the sender mailbox to improve email delivery.
+- The protection-request form sends automatically through request-protection/send.php.
+  It does not open Outlook and does not require a database.
+- After upload, submit a test enquiry. If it is not delivered, ask your hosting
+  provider to enable PHP mail() or configure authenticated SMTP for the domain.
+- The .htaccess file adds basic security and caching rules on Apache/LiteSpeed
+  hosting. Other server types can safely ignore it.
+- Upload the site at the domain root. Its links use root paths such as /assets/
+  and /legal/.
